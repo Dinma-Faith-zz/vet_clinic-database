@@ -28,3 +28,14 @@ CREATE TABLE IF NOT EXISTS species(
 );
 
 SELECT * FROM species;
+
+-- Modify animal table
+ALTER TABLE animals
+  DROP COLUMN species
+  ADD COLUMN species_id INT,
+  ADD FOREIGN KEY (species_id) REFERENCES species(id),
+  ADD COLUMN owner_id INT,
+  ADD FOREIGN KEY (owner_id) REFERENCES owners(id
+);
+
+SELECT * FROM animals;
