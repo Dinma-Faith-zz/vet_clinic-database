@@ -67,4 +67,7 @@ vet_id INT,
 FOREIGN KEY (vet_id) REFERENCES vets(id)
 );
 
+ALTER TABLE visits
+ADD COLUMN date_of_visit DATE;
+
 SELECT * FROM visits;
