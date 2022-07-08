@@ -48,3 +48,13 @@ date_of_graduation DATE
 );
 
 vet_clinic=# SELECT * FROM vets;
+
+CREATE TABLE IF NOT EXISTS specialization (
+id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+species_id INT,
+FOREIGN KEY (species_id) REFERENCES species(id),
+vet_id INT,
+FOREIGN KEY (vet_id) REFERENCES vets(id)
+);
+
+vet_clinic=# SELECT * FROM specialization;
