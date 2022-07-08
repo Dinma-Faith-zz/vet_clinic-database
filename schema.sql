@@ -39,3 +39,12 @@ ALTER TABLE animals
 );
 
 SELECT * FROM animals;
+
+CREATE TABLE IF NOT EXISTS vets (
+id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+name VARCHAR(100),
+age INT,
+date_of_graduation DATE
+);
+
+vet_clinic=# SELECT * FROM vets;
