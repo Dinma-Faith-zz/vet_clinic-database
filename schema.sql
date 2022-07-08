@@ -58,3 +58,13 @@ FOREIGN KEY (vet_id) REFERENCES vets(id)
 );
 
 vet_clinic=# SELECT * FROM specialization;
+
+CREATE TABLE IF NOT EXISTS visits (
+id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+animal_id INT,
+FOREIGN KEY (animal_id) REFERENCES animals(id),
+vet_id INT,
+FOREIGN KEY (vet_id) REFERENCES vets(id)
+);
+
+SELECT * FROM visits;
