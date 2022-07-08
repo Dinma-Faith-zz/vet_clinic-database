@@ -68,9 +68,3 @@ FOREIGN KEY (vet_id) REFERENCES vets(id)
 );
 
 SELECT * FROM visits;
-
-INSERT INTO vets (name, age, date_of_graduation)
-VALUES ('Vet William Tatcher', 45, 'Apr 23 2000'),
-('Vet Maisy Smith', 26 ,'Jan 17 2019'),
-('Vet Stephanie Mendez', 64, 'May 04 1981'),
-('Vet Jack Harkness', 38,'Jun 08 2008'); 
