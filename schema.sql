@@ -71,3 +71,18 @@ ALTER TABLE visits
 ADD COLUMN date_of_visit DATE;
 
 SELECT * FROM visits;
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- INDEX
+CREATE INDEX animal_id_desc ON visits(animal_id DESC);
+explain analyze SELECT COUNT(*) FROM visits where animal_id = 4;
+
+CREATE INDEX vet_index ON visits(vet_id);
+explain analyze SELECT * FROM visits
+WHERE vet_id = 2;
+
+CREATE INDEX email_desc ON owners(email DESC);
+explain analyze SELECT * FROM owners
+WHERE email = 'owner_18327@mail.com';
