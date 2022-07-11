@@ -17,6 +17,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@twitterhandle](https://twitter.com/phayte_p)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/chidinma-faith)
 
+👤 **Abol Ger**
+
+- GitHub: [@ger619](https://github.com/ger619)
+- Twitter: [@ger_abol](https://twitter.com/ger_abol)
+- LinkedIn: [David Ger](https://linkedin.com/in/david-ger-426b4576) 
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
