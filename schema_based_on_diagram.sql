@@ -15,7 +15,7 @@ CREATE TABLE patients(
 CREATE TABLE medical_histories(
  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
  admitted_at timestamp,
- patient_id int REFERENCES patients(id),
+ patient_id INT REFERENCES patients(id),
  status varchar(255)
 
 );
@@ -35,7 +35,7 @@ id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     total_amount decimal,
     generated_at decimal,
     payed_at timestamp,
-    medical_history__id int REFERENCES medical_histories(id),
+    medical_history__id INT REFERENCES medical_histories(id),
 );
 
 /* Add  invoice_items table to schema_based_on_diagram database. */
@@ -43,8 +43,8 @@ id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 CREATE TABLE invoice_items (
 id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     unique_price decimal,
-    quantity int,
+    quantity INT,
     total_price decimal,
-    invoice_id int REFERENCES invoices(id),
-    treatment_id int REFERENCES treatments(id)
+    invoice_id INT REFERENCES invoices(id),
+    treatment_id INT REFERENCES treatments(id)
 );
