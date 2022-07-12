@@ -2,35 +2,35 @@
 
 CREATE DATABASE schema_based_on_diagram;
 
-/* Add patients table to clinic database. */
+/* Add patients table to schema_based_on_diagram database. */
 
-CREATE TABLE IF NOT EXISTS patients(
+CREATE TABLE patients(
  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
  name VARCHAR(255),
  date_of_birth DATE
 
 );
 
-/* Add medical_histories table to clinic database. */
-CREATE TABLE IF NOT EXISTS medical_histories(
+/* Add medical_histories table to schema_based_on_diagram database. */
+CREATE TABLE medical_histories(
  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
  admitted_at timestamp,
  patient_id int REFERENCES patients(id),
  status varchar(255)
 
 );
-/* Add treatments table to clinic database. */
+/* Add treatments table to schema_based_on_diagram database. */
 
-CREATE TABLE IF NOT EXISTS treatments(
+CREATE TABLE treatments(
  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
  type varchar(255),
  name VARCHAR(255)
 
 );
 
-/* Add  invoices table to clinic database. */
+/* Add  invoices table to schema_based_on_diagram database. */
 
-CREATE TABLE IF NOT EXISTS invoices (
+CREATE TABLE invoices (
 id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     total_amount decimal,
     generated_at decimal,
@@ -38,9 +38,9 @@ id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     medical_history__id int REFERENCES medical_histories(id),
 );
 
-/* Add  invoice_items table to clinic database. */
+/* Add  invoice_items table to schema_based_on_diagram database. */
 
-CREATE TABLE IF NOT EXISTS invoice_items (
+CREATE TABLE invoice_items (
 id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     unique_price decimal,
     quantity int,
